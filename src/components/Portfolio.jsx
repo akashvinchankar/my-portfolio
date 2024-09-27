@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Briefcase,
   Code,
@@ -14,7 +15,6 @@ import {
   Sun,
 } from "lucide-react";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
 
 const Portfolio = () => {
   const [theme, setTheme] = useState("light");
@@ -28,7 +28,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-900 font-sans transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-gray-900 dark:to-indigo-950 font-sans transition-colors duration-300">
       <div className="max-w-7xl mx-auto p-4 sm:p-8">
         <nav className="flex justify-end mb-8">
           <button
@@ -44,13 +44,13 @@ const Portfolio = () => {
           </button>
         </nav>
 
-        <header className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300 transform hover:scale-102">
+        <header className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex flex-col md:flex-row items-center mb-6 md:mb-0">
               <img
                 src="https://avatars.githubusercontent.com/u/86399324?v=4"
                 alt="Akash Vinchankar"
-                className="w-40 h-40 rounded-full border-4 border-indigo-500 shadow-lg mb-4 md:mb-0 md:mr-8"
+                className="w-40 h-40 rounded-full border-4 border-indigo-500 shadow-lg mb-4 md:mb-0 md:mr-8 transition-transform duration-300 transform hover:scale-105"
               />
               <div className="text-center md:text-left">
                 <h1 className="text-4xl sm:text-5xl font-bold mb-2 text-gray-800 dark:text-white">
@@ -59,7 +59,7 @@ const Portfolio = () => {
                 <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-4">
                   Frontend Developer
                 </p>
-                <div className="flex justify-center md:justify-start space-x-4">
+                <div className="flex justify-center md:justify-start space-x-8">
                   <SocialLink
                     href="https://github.com/akashvinchankar"
                     icon={<Github size={24} />}
@@ -76,6 +76,10 @@ const Portfolio = () => {
                     href="tel:+919604346378"
                     icon={<Phone size={24} />}
                   />
+                  {/* <SocialLink
+                    href="https://leetcode.com/akashvinchankar"
+                    icon={<LeetCodeIcon />}
+                  /> */}
                 </div>
               </div>
             </div>
@@ -93,11 +97,7 @@ const Portfolio = () => {
           </div>
         </header>
 
-        <section className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300 transform hover:scale-102">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800 dark:text-white flex items-center">
-            <Code className="mr-2 text-indigo-500" size={32} />
-            About Me
-          </h2>
+        <Section title="About Me" icon={<Code className="mr-2" size={32} />}>
           <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
             Frontend Developer with 3 years of experience in JavaScript,
             React.js and TypeScript. Skilled in building scalable, maintainable
@@ -105,13 +105,9 @@ const Portfolio = () => {
             creating intuitive user interfaces and solving complex problems
             through elegant code.
           </p>
-        </section>
+        </Section>
 
-        <section className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300 transform hover:scale-102">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800 dark:text-white flex items-center">
-            <Code className="mr-2 text-indigo-500" size={32} />
-            Skills
-          </h2>
+        <Section title="Skills" icon={<Code className="mr-2" size={32} />}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <SkillCategory
               title="Frontend"
@@ -147,7 +143,7 @@ const Portfolio = () => {
                 },
                 {
                   name: "Tailwind CSS",
-                  logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                  logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
                 },
               ]}
             />
@@ -167,7 +163,7 @@ const Portfolio = () => {
             />
             <SkillCategory
               title="Tools & Other"
-              icon={<Settings size={24} className="text-indigo-500" />} // Replaced Tool with Settings
+              icon={<Settings size={24} className="text-indigo-500" />}
               skills={[
                 {
                   name: "Git",
@@ -188,13 +184,12 @@ const Portfolio = () => {
               ]}
             />
           </div>
-        </section>
+        </Section>
 
-        <section className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300 transform hover:scale-102">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800 dark:text-white flex items-center">
-            <Briefcase className="mr-2 text-indigo-500" size={32} />
-            Work Experience
-          </h2>
+        <Section
+          title="Work Experience"
+          icon={<Briefcase className="mr-2" size={32} />}
+        >
           <div className="space-y-12">
             <ExperienceCard
               company="Qubecinema Technologies Pvt. Ltd"
@@ -203,10 +198,10 @@ const Portfolio = () => {
               responsibilities={[
                 "Developed features for Qube Slate using React.js, TypeScript, and SCSS.",
                 "Migrated from class components to functional components, improving code maintainability.",
-                "Implemented API caching, reducing server load and costs by 30% enhancing performance.",
-                "Created reusable components for filters, uploading CSVs reducing feature development time by 25%.",
+                "Implemented API caching, reducing server load and costs by 30%, enhancing performance.",
+                "Created reusable components for filters, uploading CSVs, reducing feature development time by 25%.",
                 "Contributed to backend API development and search optimization with SQL and Golang.",
-                "Documented features and incorporated business feedback, which increased user satisfaction by 35%.",
+                "Documented features and incorporated business feedback, increasing user satisfaction by 35%.",
               ]}
             />
             <ExperienceCard
@@ -214,19 +209,15 @@ const Portfolio = () => {
               position="Programmer Analyst"
               period="Oct 2021 - Nov 2022"
               responsibilities={[
-                "Developed a UI dashboard for a major food chain using React.js, which increased user engagement.",
-                "Enhanced the existing codebase for better readability and maintainability by introducing pre-deployment checks, which reduced bug reports by 30%.",
+                "Developed a UI dashboard for a major food chain using React.js, increasing user engagement.",
+                "Enhanced the codebase for readability and maintainability by introducing pre-deployment checks, reducing bug reports by 30%.",
                 "Collaborated with backend developers and UX designers, improving project delivery times.",
               ]}
             />
           </div>
-        </section>
+        </Section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800 dark:text-white flex items-center">
-            <Code className="mr-2 text-indigo-500" size={32} />
-            Projects
-          </h2>
+        <Section title="Projects" icon={<Code className="mr-2" size={32} />}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard
               title="Movies Directory App"
@@ -243,25 +234,24 @@ const Portfolio = () => {
               codeLink="https://github.com/akashvinchankar/cocktails-directory"
             />
           </div>
-        </section>
+        </Section>
 
-        <section className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300 transform hover:scale-102">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800 dark:text-white flex items-center">
-            <GraduationCap className="mr-2 text-indigo-500" size={32} />
-            Education
-          </h2>
-          <div>
-            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300">
+        <Section
+          title="Education"
+          icon={<GraduationCap className="mr-2" size={32} />}
+        >
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Bachelor&apos;s Degree
             </h3>
-            <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400">
+            <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-1">
               Shri Sant Gajanan Maharaj College of Engineering
             </p>
-            <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mt-2">
+            <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
               2017 - 2021 | CGPA: 9.5/10.0
             </p>
           </div>
-        </section>
+        </Section>
 
         <footer className="text-center text-gray-600 dark:text-gray-400">
           <p className="mb-4 text-lg">
@@ -283,6 +273,22 @@ const Portfolio = () => {
   );
 };
 
+const Section = ({ title, icon, children }) => (
+  <section className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300">
+    <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center">
+      {icon}
+      {title}
+    </h2>
+    {children}
+  </section>
+);
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
 const SocialLink = ({ href, icon }) => (
   <a
     href={href}
@@ -301,19 +307,16 @@ SocialLink.propTypes = {
 };
 
 const SkillCategory = ({ title, icon, skills }) => (
-  <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow-md">
-    <h3 className="font-semibold text-xl mb-4 text-gray-800 dark:text-white flex items-center">
+  <div className="bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+    <h3 className="text-2xl font-semibold mb-4 flex items-center text-indigo-600 dark:text-indigo-400">
       {icon}
       <span className="ml-2">{title}</span>
     </h3>
-    <ul className="space-y-3">
-      {skills.map((skill, index) => (
-        <li
-          key={index}
-          className="text-gray-700 dark:text-gray-300 flex items-center"
-        >
-          <img src={skill.logo} alt={skill.name} className="w-6 h-6 mr-3" />
-          {skill.name}
+    <ul className="grid grid-cols-2 gap-4">
+      {skills.map((skill) => (
+        <li key={skill.name} className="flex items-center space-x-2">
+          <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+          <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
         </li>
       ))}
     </ul>
@@ -332,23 +335,26 @@ SkillCategory.propTypes = {
 };
 
 const ExperienceCard = ({ company, position, period, responsibilities }) => (
-  <div className="border-l-4 border-indigo-500 pl-6 py-2">
-    <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 dark:text-white">
-      {company}
-    </h3>
-    <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-2">
-      {position}
-    </p>
-    <p className="text-lg text-gray-600 dark:text-gray-400 italic mb-4">
-      {period}
-    </p>
-    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-      {responsibilities.map((resp, index) => (
-        <li key={index} className="text-base sm:text-lg">
-          {resp}
-        </li>
-      ))}
-    </ul>
+  <div className="relative bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl">
+    <div className="absolute left-0 top-0 h-full w-1 bg-indigo-600 rounded-l-lg"></div>
+    <div className="pl-6">
+      <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">
+        {company}
+      </h3>
+      <p className="text-xl text-gray-800 dark:text-white font-medium mb-1">
+        {position}
+      </p>
+      <p className="text-lg text-gray-600 dark:text-gray-400 italic mb-4">
+        {period}
+      </p>
+      <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+        {responsibilities.map((resp, index) => (
+          <li key={index} className="text-base leading-relaxed">
+            {resp}
+          </li>
+        ))}
+      </ul>
+    </div>
   </div>
 );
 
@@ -361,12 +367,18 @@ ExperienceCard.propTypes = {
 
 const ProjectCard = ({ title, description, imageUrl, demoLink, codeLink }) => (
   <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 transform hover:scale-105">
-    <img src={imageUrl} alt={title} className="w-full h-56 object-cover" />
+    <div className="h-64 overflow-hidden">
+      <img
+        src={imageUrl}
+        alt={title}
+        className="w-full h-full object-cover object-top"
+      />
+    </div>
     <div className="p-6">
-      <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-white">
+      <h3 className="text-2xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">
         {title}
       </h3>
-      <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+      <p className="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
       <div className="flex justify-between">
         <a
           href={demoLink}
