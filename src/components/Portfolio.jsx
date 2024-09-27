@@ -22,6 +22,7 @@ import YTClone from "../assets/YTClone.png";
 import picofme from "../assets/picofme.png";
 import thetaravu from "../assets/thetaravu.png";
 import tmdb from "../assets/Tmdb.png";
+import Resume from "../assets/Akash_Vinchankar_Resume.pdf";
 
 const Portfolio = () => {
   const [theme, setTheme] = useState("light");
@@ -88,7 +89,7 @@ const Portfolio = () => {
             </div>
             <div className="mt-6 md:mt-0">
               <a
-                href="/src/assets/Akash Vinchankar Resume Sept 2024.pdf"
+                href={Resume}
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-lg hover:from-indigo-600 hover:to-purple-700 transition duration-300 flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"
