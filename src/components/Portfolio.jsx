@@ -1,20 +1,21 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import {
-  Briefcase,
-  Code,
-  ExternalLink,
-  Github,
-  Globe,
-  GraduationCap,
-  Linkedin,
-  Mail,
-  Moon,
-  Phone,
-  Server,
-  Settings,
-  Sun,
-} from "lucide-react";
-import PropTypes from "prop-types";
+  FaBriefcase,
+  FaCode,
+  FaUser,
+  FaCog,
+  FaEnvelope,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaGlobe,
+  FaGraduationCap,
+  FaLinkedin,
+  FaMoon,
+  FaPhone,
+  FaServer,
+  FaSun,
+} from "react-icons/fa";
 
 const Portfolio = () => {
   const [theme, setTheme] = useState("light");
@@ -37,9 +38,9 @@ const Portfolio = () => {
             aria-label="Toggle Theme"
           >
             {theme === "light" ? (
-              <Moon className="text-indigo-600" />
+              <FaMoon className="text-indigo-600 text-lg" />
             ) : (
-              <Sun className="text-yellow-400" />
+              <FaSun className="text-yellow-400 text-lg" />
             )}
           </button>
         </nav>
@@ -62,24 +63,20 @@ const Portfolio = () => {
                 <div className="flex justify-center md:justify-start space-x-8">
                   <SocialLink
                     href="https://github.com/akashvinchankar"
-                    icon={<Github size={24} />}
+                    icon={<FaGithub size={28} />}
                   />
                   <SocialLink
                     href="https://www.linkedin.com/in/akash-vinchankar"
-                    icon={<Linkedin size={24} />}
+                    icon={<FaLinkedin size={28} />}
                   />
                   <SocialLink
                     href="mailto:akashvinchankar@gmail.com"
-                    icon={<Mail size={24} />}
+                    icon={<FaEnvelope size={28} />}
                   />
                   <SocialLink
                     href="tel:+919604346378"
-                    icon={<Phone size={24} />}
+                    icon={<FaPhone size={28} />}
                   />
-                  {/* <SocialLink
-                    href="https://leetcode.com/akashvinchankar"
-                    icon={<LeetCodeIcon />}
-                  /> */}
                 </div>
               </div>
             </div>
@@ -90,28 +87,28 @@ const Portfolio = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="mr-2">Download CV</span>
-                <ExternalLink size={18} />
+                <span className="mr-2 text-lg">Download CV</span>
+                <FaExternalLinkAlt size={20} />
               </a>
             </div>
           </div>
         </header>
 
-        <Section title="About Me" icon={<Code className="mr-2" size={32} />}>
+        <Section title="About Me" icon={<FaUser className="mr-2" size={28} />}>
           <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
             Frontend Developer with 3 years of experience in JavaScript,
-            React.js and TypeScript. Skilled in building scalable, maintainable
+            React.js, and TypeScript. Skilled in building scalable, maintainable
             web applications and optimizing performance. Passionate about
             creating intuitive user interfaces and solving complex problems
             through elegant code.
           </p>
         </Section>
 
-        <Section title="Skills" icon={<Code className="mr-2" size={32} />}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Section title="Skills" icon={<FaCode className="mr-2" size={28} />}>
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
             <SkillCategory
               title="Frontend"
-              icon={<Globe size={24} className="text-indigo-500" />}
+              icon={<FaGlobe size={28} className="text-indigo-500" />}
               skills={[
                 {
                   name: "JavaScript",
@@ -149,7 +146,7 @@ const Portfolio = () => {
             />
             <SkillCategory
               title="Backend"
-              icon={<Server size={24} className="text-indigo-500" />}
+              icon={<FaServer size={28} className="text-indigo-500" />}
               skills={[
                 {
                   name: "SQL",
@@ -163,7 +160,7 @@ const Portfolio = () => {
             />
             <SkillCategory
               title="Tools & Other"
-              icon={<Settings size={24} className="text-indigo-500" />}
+              icon={<FaCog size={28} className="text-indigo-500" />}
               skills={[
                 {
                   name: "Git",
@@ -181,6 +178,14 @@ const Portfolio = () => {
                   name: "Responsive Design",
                   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
                 },
+                {
+                  name: "VS Code",
+                  logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+                },
+                {
+                  name: "JIRA",
+                  logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+                },
               ]}
             />
           </div>
@@ -188,7 +193,7 @@ const Portfolio = () => {
 
         <Section
           title="Work Experience"
-          icon={<Briefcase className="mr-2" size={32} />}
+          icon={<FaBriefcase className="mr-2" size={28} />}
         >
           <div className="space-y-12">
             <ExperienceCard
@@ -217,7 +222,7 @@ const Portfolio = () => {
           </div>
         </Section>
 
-        <Section title="Projects" icon={<Code className="mr-2" size={32} />}>
+        <Section title="Projects" icon={<FaCode className="mr-2" size={28} />}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard
               title="Movies Directory App"
@@ -238,7 +243,7 @@ const Portfolio = () => {
 
         <Section
           title="Education"
-          icon={<GraduationCap className="mr-2" size={32} />}
+          icon={<FaGraduationCap className="mr-2" size={28} />}
         >
           <div className="bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl">
             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
@@ -254,7 +259,12 @@ const Portfolio = () => {
         </Section>
 
         <footer className="text-center text-gray-600 dark:text-gray-400">
-          <p className="mb-4 text-lg">
+          <p className="mb-4 text-lg flex items-center justify-center">
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp&w=256"
+              alt="LeetCode Logo"
+              className="h-6 w-6 mr-2"
+            />
             LeetCode Profile:{" "}
             <a
               href="https://leetcode.com/akashvinchankar"
@@ -275,7 +285,7 @@ const Portfolio = () => {
 
 const Section = ({ title, icon, children }) => (
   <section className="mb-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 transition-all duration-300">
-    <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center">
+    <h2 className="text-2xl sm:text-2xl font-bold mb-6 text-indigo-600 dark:text-indigo-400 flex items-center">
       {icon}
       {title}
     </h2>
@@ -387,7 +397,7 @@ const ProjectCard = ({ title, description, imageUrl, demoLink, codeLink }) => (
           rel="noopener noreferrer"
         >
           <span className="mr-1">Live Demo</span>
-          <ExternalLink size={16} />
+          <FaExternalLinkAlt size={16} />
         </a>
         <a
           href={codeLink}
@@ -396,7 +406,7 @@ const ProjectCard = ({ title, description, imageUrl, demoLink, codeLink }) => (
           rel="noopener noreferrer"
         >
           <span className="mr-1">View Code</span>
-          <Github size={16} />
+          <FaGithub size={16} />
         </a>
       </div>
     </div>
