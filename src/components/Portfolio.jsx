@@ -17,6 +17,12 @@ import {
   FaSun,
 } from "react-icons/fa";
 
+import Cocktail from "../assets/Cocktail.png";
+import YTClone from "../assets/YTClone.png";
+import picofme from "../assets/picofme.png";
+import thetaravu from "../assets/thetaravu.png";
+import tmdb from "../assets/Tmdb.png";
+
 const Portfolio = () => {
   const [theme, setTheme] = useState("light");
 
@@ -49,7 +55,7 @@ const Portfolio = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex flex-col md:flex-row items-center mb-6 md:mb-0">
               <img
-                src="../assets/picofme.png"
+                src={picofme}
                 alt="Akash Vinchankar"
                 className="w-40 h-40 rounded-full border-4 border-indigo-500 shadow-lg mb-4 md:mb-0 md:mr-8 transition-transform duration-300 transform hover:scale-105"
               />
@@ -227,28 +233,28 @@ const Portfolio = () => {
             <ProjectCard
               title="Movies Directory App"
               description="A comprehensive movie library application with features like 'Add to Favorites' and sorting based on ratings, popularity, and genre. Built using React.js, Axios, and the open-source Movies API."
-              imageUrl="/src/assets/Tmdb.png"
+              imageUrl={tmdb}
               demoLink="https://imdb-akashv.netlify.app/"
               codeLink="https://github.com/akashvinchankar/IMDB/tree/master/imdb"
             />
             <ProjectCard
               title="Cocktails Directory"
               description="An interactive web application to browse and search various drink recipes using keywords. Built using React.js and the Context API."
-              imageUrl="/src/assets/Cocktail.png"
+              imageUrl={Cocktail}
               demoLink="https://cocktails-directory-akv.netlify.app/"
               codeLink="https://github.com/akashvinchankar/cocktails-directory"
             />
             <ProjectCard
               title="The Taravu"
               description="An web application for see the prices of heavy machinery and equipment. Built using React.js, Axios, and scraping data from the web."
-              imageUrl="/src/assets/thetaravu.png"
+              imageUrl={thetaravu}
               demoLink="https://thetaravu.com/"
               codeLink="https://github.com/akashvinchankar/bid-my-asset"
             />
             <ProjectCard
               title="Youtube Clone"
               description="A clone of the popular video-sharing platform YouTube. Built using React.js, Redux Toolkit, and the YouTube Data API."
-              imageUrl="/src/assets/YTClone.png"
+              imageUrl={YTClone}
               demoLink="https://tube-akash-v.netlify.app/"
               codeLink="https://github.com/akashvinchankar/tube-akash"
             />
