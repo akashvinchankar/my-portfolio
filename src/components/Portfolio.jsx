@@ -202,7 +202,7 @@ const Portfolio = () => {
           title="Work Experience"
           icon={<FaBriefcase className="mr-2" size={28} />}
         >
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-6">
             <ExperienceCard
               company="Qubecinema Technologies Pvt. Ltd"
               position="Associate Software Engineer"
@@ -279,25 +279,27 @@ const Portfolio = () => {
           </div>
         </Section>
 
-        <footer className="text-center text-gray-600 dark:text-gray-400">
-          <p className="mb-4 text-lg flex items-center justify-center">
-            <img
-              src="https://cdn.iconscout.com/icon/free/png-512/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp&w=256"
-              alt="LeetCode Logo"
-              className="h-6 w-6 mr-2"
-            />
-            LeetCode Profile:{" "}
-            <a
-              href="https://leetcode.com/akashvinchankar"
-              className="text-indigo-600 dark:text-indigo-400 hover:underline"
-            >
-              akashvinchankar
-            </a>{" "}
-            — Solved 250+ Questions
-          </p>
-          <p className="text-sm">
-            &copy; 2024 Akash Vinchankar. All rights reserved.
-          </p>
+        <footer className="text-center text-gray-600 dark:text-gray-400 py-6 px-4">
+          <div className="flex flex-col items-center">
+            <p className="mb-4 text-lg flex items-center justify-center">
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-512/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp&w=256"
+                alt="LeetCode Logo"
+                className="h-8 w-8 mr-2"
+              />
+              LeetCode Profile:{" "}
+              <a
+                href="https://leetcode.com/akashvinchankar"
+                className="text-indigo-600 dark:text-indigo-400 hover:underline"
+              >
+                akashvinchankar
+              </a>{" "}
+              — Solved 250+ Questions
+            </p>
+            <p className="text-sm">
+              &copy; 2024 Akash Vinchankar. All rights reserved.
+            </p>
+          </div>
         </footer>
       </div>
     </div>
