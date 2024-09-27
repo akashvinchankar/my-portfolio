@@ -238,6 +238,20 @@ const Portfolio = () => {
               demoLink="https://cocktails-directory-akv.netlify.app/"
               codeLink="https://github.com/akashvinchankar/cocktails-directory"
             />
+            <ProjectCard
+              title="The Taravu"
+              description="An web application for see the prices of heavy machinery and equipment. Built using React.js, Axios, and scraping data from the web."
+              imageUrl="/src/assets/thetaravu.png"
+              demoLink="https://thetaravu.com/"
+              codeLink="https://github.com/akashvinchankar/bid-my-asset"
+            />
+            <ProjectCard
+              title="Youtube Clone"
+              description="A clone of the popular video-sharing platform YouTube. Built using React.js, Redux Toolkit, and the YouTube Data API."
+              imageUrl="/src/assets/YTClone.png"
+              demoLink="https://tube-akash-v.netlify.app/"
+              codeLink="https://github.com/akashvinchankar/tube-akash"
+            />
           </div>
         </Section>
 
