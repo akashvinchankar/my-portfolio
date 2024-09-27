@@ -49,7 +49,7 @@ const Portfolio = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex flex-col md:flex-row items-center mb-6 md:mb-0">
               <img
-                src="https://avatars.githubusercontent.com/u/86399324?v=4"
+                src="/src/assets/picofme.png"
                 alt="Akash Vinchankar"
                 className="w-40 h-40 rounded-full border-4 border-indigo-500 shadow-lg mb-4 md:mb-0 md:mr-8 transition-transform duration-300 transform hover:scale-105"
               />
