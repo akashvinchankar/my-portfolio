@@ -15,7 +15,8 @@ import {
   FaServer,
   FaSun,
   FaTools,
-  FaUser
+  FaUser,
+  FaCopy,
 } from "react-icons/fa";
 
 import Resume from "../assets/Akash_Vinchankar_Resume.pdf";
@@ -59,6 +60,8 @@ const skillIcons = {
 
 const Portfolio = () => {
   const [theme, setTheme] = useState("light");
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [phoneCopied, setPhoneCopied] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -66,6 +69,18 @@ const Portfolio = () => {
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  const copyToClipboard = (text, type) => {
+    navigator.clipboard.writeText(text).then(() => {
+      if (type === "email") {
+        setEmailCopied(true);
+        setTimeout(() => setEmailCopied(false), 2000);
+      } else if (type === "phone") {
+        setPhoneCopied(true);
+        setTimeout(() => setPhoneCopied(false), 2000);
+      }
+    });
   };
 
   return (
@@ -100,7 +115,7 @@ const Portfolio = () => {
                 <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-4">
                   Frontend Developer
                 </p>
-                <div className="flex justify-center md:justify-start space-x-8">
+                <div className="flex justify-center md:justify-start space-x-8 mb-4">
                   <SocialLink
                     href="https://github.com/akashvinchankar"
                     icon={<FaGithub size={28} />}
@@ -109,14 +124,36 @@ const Portfolio = () => {
                     href="https://www.linkedin.com/in/akash-vinchankar"
                     icon={<FaLinkedin size={28} />}
                   />
-                  <SocialLink
-                    href="mailto:akashvinchankar@gmail.com"
-                    icon={<FaEnvelope size={28} />}
-                  />
-                  <SocialLink
-                    href="tel:+919604346378"
-                    icon={<FaPhone size={28} />}
-                  />
+                </div>
+                <div className="flex flex-col items-center md:items-start">
+                  <div className="flex items-center mb-1">
+                    <FaEnvelope className="text-indigo-600 dark:text-indigo-400 mr-2" />
+                    <span className="text-indigo-600 dark:text-indigo-400">
+                      akashvinchankar@gmail.com
+                    </span>
+                    <FaCopy
+                      className="text-gray-600 dark:text-gray-400 cursor-pointer ml-2"
+                      onClick={() =>
+                        copyToClipboard("akashvinchankar@gmail.com", "email")
+                      }
+                    />
+                    {emailCopied && (
+                      <span className="ml-2 text-green-500">Copied!</span>
+                    )}
+                  </div>
+                  <div className="flex items-center">
+                    <FaPhone className="text-indigo-600 dark:text-indigo-400 mr-2" />
+                    <span className="text-indigo-600 dark:text-indigo-400">
+                      +91 96043 46378
+                    </span>
+                    <FaCopy
+                      className="text-gray-600 dark:text-gray-400 cursor-pointer ml-2"
+                      onClick={() => copyToClipboard("+919604346378", "phone")}
+                    />
+                    {phoneCopied && (
+                      <span className="ml-2 text-green-500">Copied!</span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
