@@ -56,6 +56,10 @@ const skillIcons = {
   JIRA: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
   "LeetCode Profile":
     "https://cdn.iconscout.com/icon/free/png-512/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp&w=256",
+  Axios:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+  "Context API":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 };
 
 const Portfolio = () => {
@@ -320,6 +324,7 @@ const Portfolio = () => {
               imageUrl={tmdb}
               demoLink="https://imdb-akashv.netlify.app/"
               codeLink="https://github.com/akashvinchankar/IMDB/tree/master/imdb"
+              skills={["React.js", "JavaScript", "Axios"]}
             />
             <ProjectCard
               title="Cocktails Directory"
@@ -327,13 +332,15 @@ const Portfolio = () => {
               imageUrl={Cocktail}
               demoLink="https://cocktails-directory-akv.netlify.app/"
               codeLink="https://github.com/akashvinchankar/cocktails-directory"
+              skills={["React.js", "JavaScript", "Context API"]}
             />
             <ProjectCard
               title="The Taravu"
-              description="An web application for see the prices of heavy machinery and equipment. Built using React.js, Axios, and scraping data from the web."
+              description="A web application for seeing the prices of heavy machinery and equipment. Built using React.js, Axios, and scraping data from the web."
               imageUrl={thetaravu}
               demoLink="https://thetaravu.com/"
               codeLink="https://github.com/akashvinchankar/bid-my-asset"
+              skills={["React.js", "JavaScript", "Axios"]}
             />
             <ProjectCard
               title="Youtube Clone"
@@ -341,6 +348,7 @@ const Portfolio = () => {
               imageUrl={YTClone}
               demoLink="https://tube-akash-v.netlify.app/"
               codeLink="https://github.com/akashvinchankar/tube-akash"
+              skills={["React.js", "Redux Toolkit"]}
             />
           </div>
         </Section>
@@ -476,28 +484,7 @@ const ExperienceCard = ({
           </li>
         ))}
       </ul>
-      {skills && skills.length > 0 && (
-        <div className="mt-4">
-          <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
-            Skills Used:
-          </h4>
-          <ul className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <li
-                key={skill}
-                className="flex items-center bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 py-1 px-3 rounded-full text-sm"
-              >
-                <img
-                  src={skillIcons[skill]}
-                  alt={skill}
-                  className="w-4 h-4 mr-1"
-                />
-                {skill}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {skills && skills.length > 0 && <SkillsList skills={skills} />}
     </div>
   </div>
 );
@@ -510,8 +497,15 @@ ExperienceCard.propTypes = {
   skills: PropTypes.array,
 };
 
-const ProjectCard = ({ title, description, imageUrl, demoLink, codeLink }) => (
-  <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 transform hover:scale-105">
+const ProjectCard = ({
+  title,
+  description,
+  imageUrl,
+  demoLink,
+  codeLink,
+  skills,
+}) => (
+  <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl flex flex-col justify-between h-full transition-all duration-300 transform hover:scale-105">
     <div className="h-64 overflow-hidden">
       <img
         src={imageUrl}
@@ -519,34 +513,38 @@ const ProjectCard = ({ title, description, imageUrl, demoLink, codeLink }) => (
         className="w-full h-full object-cover object-top"
       />
     </div>
-    <div className="p-6">
-      <h3 className="text-2xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">
+    <div className="p-6 flex flex-col flex-grow">
+      <h3 className="text-2xl font-semibold mb-3 text-indigo-600 dark:text-indigo-400">
         {title}
       </h3>
-      <p className="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
-      <div className="flex justify-between">
-        <a
-          href={demoLink}
-          className="text-indigo-500 dark:text-indigo-400 hover:underline flex items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="mr-1">Live Demo</span>
-          <FaExternalLinkAlt size={16} />
-        </a>
-        <a
-          href={codeLink}
-          className="text-indigo-500 dark:text-indigo-400 hover:underline flex items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="mr-1">View Code</span>
-          <FaGithub size={16} />
-        </a>
-      </div>
+      <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
+        {description}
+      </p>
+      <SkillsList skills={skills} />
+    </div>
+    <div className="p-6 flex justify-between items-center">
+      <a
+        href={demoLink}
+        className="text-indigo-500 dark:text-indigo-400 hover:underline flex items-center"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span className="mr-1">Live Demo</span>
+        <FaExternalLinkAlt size={16} />
+      </a>
+      <a
+        href={codeLink}
+        className="text-indigo-500 dark:text-indigo-400 hover:underline flex items-center"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span className="mr-1">View Code</span>
+        <FaGithub size={16} />
+      </a>
     </div>
   </div>
 );
+
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
@@ -554,6 +552,30 @@ ProjectCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   demoLink: PropTypes.string.isRequired,
   codeLink: PropTypes.string.isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string),
+};
+
+const SkillsList = ({ skills }) => (
+  <div className="mt-4">
+    <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
+      Skills Used:
+    </h4>
+    <ul className="flex flex-wrap gap-2">
+      {skills.map((skill) => (
+        <li
+          key={skill}
+          className="flex items-center bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 py-1 px-3 rounded-full text-sm"
+        >
+          <img src={skillIcons[skill]} alt={skill} className="w-4 h-4 mr-1" />
+          {skill}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+SkillsList.propTypes = {
+  skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Portfolio;
