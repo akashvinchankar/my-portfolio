@@ -215,6 +215,7 @@ const Portfolio = () => {
                 "Contributed to backend API development and search optimization with SQL and Golang.",
                 "Documented features and incorporated business feedback, increasing user satisfaction by 35%.",
               ]}
+              skills={["React.js", "TypeScript", "SCSS", "API Caching"]}
             />
             <ExperienceCard
               company="Cognizant Technologies Pvt. Ltd"
@@ -225,6 +226,7 @@ const Portfolio = () => {
                 "Enhanced the codebase for readability and maintainability by introducing pre-deployment checks, reducing bug reports by 30%.",
                 "Collaborated with backend developers and UX designers, improving project delivery times.",
               ]}
+              skills={["React.js", "Redux Toolkit", "Collaboration"]}
             />
           </div>
         </Section>
@@ -367,9 +369,15 @@ SkillCategory.propTypes = {
   ).isRequired,
 };
 
-const ExperienceCard = ({ company, position, period, responsibilities }) => (
+const ExperienceCard = ({
+  company,
+  position,
+  period,
+  responsibilities,
+  skills,
+}) => (
   <div className="relative bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl">
-    <div className="absolute left-0 top-0 h-full w-1 bg-indigo-600 rounded-l-lg"></div>
+    <div className="hidden md:block absolute left-0 top-0 h-full w-1 bg-indigo-600 rounded-l-lg"></div>
     <div className="pl-6">
       <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">
         {company}
@@ -387,6 +395,23 @@ const ExperienceCard = ({ company, position, period, responsibilities }) => (
           </li>
         ))}
       </ul>
+      {skills && skills.length > 0 && (
+        <div className="mt-4">
+          <h4 className="font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
+            Skills Used:
+          </h4>
+          <ul className="flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <li
+                key={skill}
+                className="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 py-1 px-3 rounded-full text-sm"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   </div>
 );
@@ -396,6 +421,7 @@ ExperienceCard.propTypes = {
   position: PropTypes.string.isRequired,
   period: PropTypes.string.isRequired,
   responsibilities: PropTypes.arrayOf(PropTypes.string).isRequired,
+  skills: PropTypes.array,
 };
 
 const ProjectCard = ({ title, description, imageUrl, demoLink, codeLink }) => (
