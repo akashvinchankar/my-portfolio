@@ -2,27 +2,60 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import {
   FaBriefcase,
-  FaCode,
-  FaUser,
   FaCog,
+  FaDesktop,
   FaEnvelope,
   FaExternalLinkAlt,
   FaGithub,
-  FaGlobe,
   FaGraduationCap,
   FaLinkedin,
   FaMoon,
   FaPhone,
+  FaProjectDiagram,
   FaServer,
   FaSun,
+  FaTools,
+  FaUser,
 } from "react-icons/fa";
 
+import Resume from "../assets/Akash_Vinchankar_Resume.pdf";
 import Cocktail from "../assets/Cocktail.png";
-import YTClone from "../assets/YTClone.png";
 import picofme from "../assets/picofme.png";
 import thetaravu from "../assets/thetaravu.png";
 import tmdb from "../assets/Tmdb.png";
-import Resume from "../assets/Akash_Vinchankar_Resume.pdf";
+import YTClone from "../assets/YTClone.png";
+
+const skillIcons = {
+  "React.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  TypeScript:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  SCSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+  JavaScript:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "Redux Toolkit":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "Tailwind CSS":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  PostgreSQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  Golang:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+  Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  "RESTful APIs":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "Performance Optimization":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
+  "Responsive Design":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  "VS Code":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  JIRA: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+  "LeetCode Profile":
+    "https://cdn.iconscout.com/icon/free/png-512/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp&w=256",
+};
 
 const Portfolio = () => {
   const [theme, setTheme] = useState("light");
@@ -102,7 +135,7 @@ const Portfolio = () => {
         </header>
 
         <Section title="About Me" icon={<FaUser className="mr-2" size={28} />}>
-          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="font-sans text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
             Frontend Developer with 3 years of experience in JavaScript,
             React.js, and TypeScript. Skilled in building scalable, maintainable
             web applications and optimizing performance. Passionate about
@@ -111,11 +144,11 @@ const Portfolio = () => {
           </p>
         </Section>
 
-        <Section title="Skills" icon={<FaCode className="mr-2" size={28} />}>
+        <Section title="Skills" icon={<FaTools className="mr-2" size={28} />}>
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
             <SkillCategory
               title="Frontend"
-              icon={<FaGlobe size={28} className="text-indigo-500" />}
+              icon={<FaDesktop size={28} className="text-indigo-500" />}
               skills={[
                 {
                   name: "JavaScript",
@@ -156,12 +189,12 @@ const Portfolio = () => {
               icon={<FaServer size={28} className="text-indigo-500" />}
               skills={[
                 {
-                  name: "SQL",
-                  logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-                },
-                {
                   name: "Golang",
                   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+                },
+                {
+                  name: "PostgreSQL",
+                  logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
                 },
               ]}
             />
@@ -215,7 +248,15 @@ const Portfolio = () => {
                 "Contributed to backend API development and search optimization with SQL and Golang.",
                 "Documented features and incorporated business feedback, increasing user satisfaction by 35%.",
               ]}
-              skills={["React.js", "TypeScript", "SCSS", "API Caching"]}
+              skills={[
+                "React.js",
+                "TypeScript",
+                "SCSS",
+                "PostgreSQL",
+                "Golang",
+                "RESTful APIs",
+                "JIRA",
+              ]}
             />
             <ExperienceCard
               company="Cognizant Technologies Pvt. Ltd"
@@ -226,12 +267,15 @@ const Portfolio = () => {
                 "Enhanced the codebase for readability and maintainability by introducing pre-deployment checks, reducing bug reports by 30%.",
                 "Collaborated with backend developers and UX designers, improving project delivery times.",
               ]}
-              skills={["React.js", "Redux Toolkit", "Collaboration"]}
+              skills={["React.js", "Redux Toolkit", "Tailwind CSS", "JIRA"]}
             />
           </div>
         </Section>
 
-        <Section title="Projects" icon={<FaCode className="mr-2" size={28} />}>
+        <Section
+          title="Projects"
+          icon={<FaProjectDiagram className="mr-2" size={28} />}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard
               title="Movies Directory App"
@@ -269,7 +313,7 @@ const Portfolio = () => {
           icon={<FaGraduationCap className="mr-2" size={28} />}
         >
           <div className="bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+            <h3 className="font-heading text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Bachelor&apos;s Degree
             </h3>
             <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-1">
@@ -343,7 +387,7 @@ SocialLink.propTypes = {
 
 const SkillCategory = ({ title, icon, skills }) => (
   <div className="bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-    <h3 className="text-2xl font-semibold mb-4 flex items-center text-indigo-600 dark:text-indigo-400">
+    <h3 className="text-2xl font-semibold mb-6 flex items-center text-indigo-600 dark:text-indigo-400">
       {icon}
       <span className="ml-2">{title}</span>
     </h3>
@@ -404,8 +448,13 @@ const ExperienceCard = ({
             {skills.map((skill) => (
               <li
                 key={skill}
-                className="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 py-1 px-3 rounded-full text-sm"
+                className="flex items-center bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 py-1 px-3 rounded-full text-sm"
               >
+                <img
+                  src={skillIcons[skill]}
+                  alt={skill}
+                  className="w-4 h-4 mr-1"
+                />
                 {skill}
               </li>
             ))}
