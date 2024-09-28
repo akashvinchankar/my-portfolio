@@ -116,8 +116,8 @@ const Portfolio = () => {
                 <h1 className="text-4xl sm:text-5xl font-bold mb-2 text-gray-800 dark:text-white">
                   Akash Vinchankar
                 </h1>
-                <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-4">
-                  Frontend Developer
+                <p className="text-xl sm:text-xl text-indigo-600 dark:text-indigo-400 mb-4">
+                  Software Developer - Frontend (React.js)
                 </p>
                 <div className="flex justify-center md:justify-start space-x-8 mb-4">
                   <SocialLink
@@ -177,11 +177,11 @@ const Portfolio = () => {
 
         <Section title="About Me" icon={<FaUser className="mr-2" size={28} />}>
           <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            Frontend Developer with 3 years of experience in JavaScript,
-            React.js, and TypeScript. Skilled in building scalable, maintainable
-            web applications and optimizing performance. Passionate about
-            creating intuitive user interfaces and solving complex problems
-            through elegant code.
+            Software Developer - Frontend with 3 years of experience in
+            JavaScript, React.js, and TypeScript. Skilled in building scalable,
+            maintainable web applications and optimizing performance. Passionate
+            about creating intuitive user interfaces and solving complex
+            problems through elegant code.
           </p>
         </Section>
 
@@ -332,7 +332,7 @@ const Portfolio = () => {
               imageUrl={Cocktail}
               demoLink="https://cocktails-directory-akv.netlify.app/"
               codeLink="https://github.com/akashvinchankar/cocktails-directory"
-              skills={["React.js", "JavaScript", "Context API"]}
+              skills={["React.js", "JavaScript", "Axios", "Context API"]}
             />
             <ProjectCard
               title="The Taravu"
@@ -348,7 +348,7 @@ const Portfolio = () => {
               imageUrl={YTClone}
               demoLink="https://tube-akash-v.netlify.app/"
               codeLink="https://github.com/akashvinchankar/tube-akash"
-              skills={["React.js", "Redux Toolkit"]}
+              skills={["React.js", "Redux Toolkit", "Axios"]}
             />
           </div>
         </Section>
@@ -358,7 +358,7 @@ const Portfolio = () => {
           icon={<FaGraduationCap className="mr-2" size={28} />}
         >
           <div className="bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+            <h3 className="text-3xl sm:text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
               Bachelor&apos;s Degree
             </h3>
             <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-1">
@@ -505,16 +505,16 @@ const ProjectCard = ({
   codeLink,
   skills,
 }) => (
-  <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl flex flex-col justify-between h-full transition-all duration-300 transform hover:scale-105">
+  <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg flex flex-col transition-transform duration-300 transform hover:scale-105">
     <div className="h-64 overflow-hidden">
       <img
         src={imageUrl}
         alt={title}
-        className="w-full h-full object-cover object-top"
+        className="w-full h-full object-cover object-center"
       />
     </div>
     <div className="p-6 flex flex-col flex-grow">
-      <h3 className="text-2xl font-semibold mb-3 text-indigo-600 dark:text-indigo-400">
+      <h3 className="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
         {title}
       </h3>
       <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
@@ -522,7 +522,7 @@ const ProjectCard = ({
       </p>
       <SkillsList skills={skills} />
     </div>
-    <div className="p-6 flex justify-between items-center">
+    <div className="p-4 flex justify-between items-center dark:bg-gray-700 rounded-b-3xl">
       <a
         href={demoLink}
         className="text-indigo-500 dark:text-indigo-400 hover:underline flex items-center"
@@ -544,7 +544,6 @@ const ProjectCard = ({
     </div>
   </div>
 );
-
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
