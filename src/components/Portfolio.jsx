@@ -15,7 +15,7 @@ import {
   FaServer,
   FaSun,
   FaTools,
-  FaUser,
+  FaUser
 } from "react-icons/fa";
 
 import Resume from "../assets/Akash_Vinchankar_Resume.pdf";
@@ -135,7 +135,7 @@ const Portfolio = () => {
         </header>
 
         <Section title="About Me" icon={<FaUser className="mr-2" size={28} />}>
-          <p className="font-sans text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
             Frontend Developer with 3 years of experience in JavaScript,
             React.js, and TypeScript. Skilled in building scalable, maintainable
             web applications and optimizing performance. Passionate about
@@ -313,7 +313,7 @@ const Portfolio = () => {
           icon={<FaGraduationCap className="mr-2" size={28} />}
         >
           <div className="bg-gradient-to-r from-indigo-50 to-purple-100 dark:from-gray-800 dark:to-indigo-900 p-6 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl">
-            <h3 className="font-heading text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Bachelor&apos;s Degree
             </h3>
             <p className="text-xl sm:text-2xl text-indigo-600 dark:text-indigo-400 mb-1">
