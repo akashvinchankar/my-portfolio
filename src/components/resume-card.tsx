@@ -56,12 +56,12 @@ export const ResumeCard = ({
     >
       <Card
         className={cn(
-          "flex",
-          description && "hover:shadow-md transition-shadow cursor-pointer"
+          "flex border border-border/40 shadow-sm hover:shadow-lg transition-all duration-300 ease-out p-4",
+          description && "cursor-pointer"
         )}
       >
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="border size-12 bg-muted-background dark:bg-foreground">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -71,7 +71,7 @@ export const ResumeCard = ({
           </Avatar>
         </div>
         <div className="flex-grow ml-4 items-center flex-col group">
-          <CardHeader>
+          <CardHeader className="p-0">
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
@@ -111,7 +111,7 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="px-6 pb-4 text-xs sm:text-sm text-muted-foreground"
+              className="px-0 pb-4 text-xs sm:text-sm text-muted-foreground"
               style={{ overflow: "hidden" }}
             >
               <div className="border-l-2 border-muted pl-4">

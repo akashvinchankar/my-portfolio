@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ShineBorder } from "@/components/magicui/shine-border";
+import { Icons } from "@/components/icons";
 import Link from "next/link";
 import Image from "next/image";
 import Markdown from "react-markdown";
@@ -77,16 +78,18 @@ export default function Page() {
                       href={DATA.contact.social.LinkedIn?.url || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                      className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors gap-2"
                     >
+                      <Icons.linkedin className="w-4 h-4" />
                       Connect on LinkedIn
                     </Link>
                     <Link
                       href={DATA.resumeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 transition-colors"
+                      className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 transition-colors gap-2"
                     >
+                      <Icons.fileText className="w-4 h-4" />
                       View Resume
                     </Link>
                   </div>
