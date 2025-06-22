@@ -14,18 +14,30 @@ import { ShineBorder } from "./magicui/shine-border";
 // Technology icons mapping
 const getTechIcon = (techName: string) => {
   const iconMap: { [key: string]: string } = {
-    "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    "Axios": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
-    "TMDB API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    "CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    "Redux Toolkit": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-    "YT API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    "Context API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "Web Scraping": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "React.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    JavaScript:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    TypeScript:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    Axios:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+    "TMDB API":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    "Redux Toolkit":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    "YT API":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "Context API":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "Web Scraping":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   };
-  return iconMap[techName] || "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg";
+  return (
+    iconMap[techName] ||
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+  );
 };
 
 interface Props {
@@ -114,12 +126,12 @@ export function ProjectCard({
         {/* Tags Section */}
         <CardContent className="p-0 flex-1">
           {tags && tags.length > 0 && (
-            <div className="space-y-1.5 mb-3">
-              {/* First row */}
-              <div className="flex flex-wrap gap-1">
-                {tags?.slice(0, Math.ceil(tags.length / 2)).map((tag) => (
+            <div className="mb-3">
+              {/* All tags in flex wrap to utilize full width */}
+              <div className="flex flex-wrap gap-1.5">
+                {tags?.map((tag) => (
                   <Badge
-                    className="px-1.5 py-1 text-[10px] font-medium bg-secondary/80 hover:bg-secondary transition-colors flex items-center gap-1"
+                    className="px-2 py-1 text-[10px] font-medium bg-secondary/80 hover:bg-secondary transition-colors flex items-center gap-1 text-center justify-center min-w-[80px]"
                     variant="secondary"
                     key={tag}
                   >
@@ -134,27 +146,6 @@ export function ProjectCard({
                   </Badge>
                 ))}
               </div>
-              {/* Second row */}
-              {tags.length > Math.ceil(tags.length / 2) && (
-                <div className="flex flex-wrap gap-1">
-                  {tags?.slice(Math.ceil(tags.length / 2)).map((tag) => (
-                    <Badge
-                      className="px-1.5 py-1 text-[10px] font-medium bg-secondary/80 hover:bg-secondary transition-colors flex items-center gap-1"
-                      variant="secondary"
-                      key={tag}
-                    >
-                      <Image
-                        src={getTechIcon(tag)}
-                        alt={tag}
-                        width={12}
-                        height={12}
-                        className="w-3 h-3"
-                      />
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              )}
             </div>
           )}
         </CardContent>

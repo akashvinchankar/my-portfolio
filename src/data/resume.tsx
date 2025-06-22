@@ -35,14 +35,19 @@ function calculateExperience(): {
 
 const experience = calculateExperience();
 
+// Helper function to get YOE text with styling
+export const getStyledYOE = () => experience.totalText;
+export const getPlainYOE = () => experience.totalText;
+
 export const DATA = {
   name: "Akash Vinchankar",
   initials: "AV",
   url: "https://akashvinchankar.dev",
   location: "Mumbai, Maharashtra, India",
   locationLink: "https://www.google.com/maps/place/mumbai",
-  description: `Frontend React Developer with ${experience.totalText} building modern web applications with React.js & TypeScript.`,
-  summary: `Frontend React Developer with **${experience.totalText}** of experience specializing in React.js, TypeScript, and modern frontend technologies. Expert in building responsive, user-friendly web applications with focus on performance optimization, state management, and exceptional user experiences. Passionate about clean code, component architecture, and staying current with the latest frontend trends and best practices.`,
+  description: `Frontend React Developer with ${experience.totalText} building modern web applications with React.js, JavaScript & TypeScript.`,
+  summary: `Frontend React Developer with **${experience.totalText}** of experience specializing in React.js, JavaScript, TypeScript, and modern frontend technologies. Expert in building responsive, user-friendly web applications with focus on performance optimization, state management, and exceptional user experiences. Passionate about clean code, component architecture, and staying current with the latest frontend trends and best practices.`,
+  styledDescription: `Frontend React Developer with <span class="text-blue-600 font-semibold">${experience.totalText}</span> building modern web applications with React.js, JavaScript & TypeScript.`,
   avatarUrl: "/picofme.png",
   resumeUrl:
     "https://drive.google.com/file/d/1JxgxWRdWZvBs8TqqdMnvIezy5VromKh-/view",
@@ -169,8 +174,8 @@ export const DATA = {
       company: "Qubecinema Technologies Pvt. Ltd",
       href: "https://www.qubecinema.com/",
       badges: ["React.js", "TypeScript", "Material UI", "SCSS"],
-      location: "Mumbai, India",
-      title: "Frontend Developer",
+      location: "Chennai, India",
+      title: "Software Engineer - Frontend",
       logoUrl:
         "https://media.licdn.com/dms/image/v2/C510BAQEK_yAFtVSNFg/company-logo_200_200/company-logo_200_200/0/1630627571909/qube_cinema_media_technologies_pvt_ltd_logo?e=2147483647&v=beta&t=iVLblLxP2AW0WglJl8CLrhrla-cwkkKzEysMov85rtM",
       start: "Dec 2022",
@@ -209,6 +214,22 @@ export const DATA = {
         {
           name: "Golang",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+        },
+        {
+          name: "JavaScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        },
+        {
+          name: "Redux Toolkit",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+        },
+        {
+          name: "Webpack",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
+        },
+        {
+          name: "Jest",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
         },
       ],
     },
@@ -302,13 +323,7 @@ export const DATA = {
       active: true,
       description:
         "YouTube clone with React.js, Redux Toolkit, and YouTube Data API featuring complete video streaming.",
-      technologies: [
-        "React.js",
-        "Redux Toolkit",
-        "Axios",
-        "YT API",
-        "CSS",
-      ],
+      technologies: ["React.js", "Redux Toolkit", "Axios", "YT API", "CSS"],
       links: [
         {
           type: "Website",
