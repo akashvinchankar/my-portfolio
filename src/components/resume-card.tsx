@@ -44,9 +44,13 @@ export const ResumeCard = ({
     }
   };
 
+  const isExternalLink = href && href.startsWith('http');
+
   return (
     <Link
       href={href || "#"}
+      target={isExternalLink ? "_blank" : undefined}
+      rel={isExternalLink ? "noopener noreferrer" : undefined}
       className="block cursor-pointer"
       onClick={handleClick}
     >

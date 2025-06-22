@@ -50,6 +50,8 @@ export function ProjectCard({
 
       <Link
         href={href || "#"}
+        target={href ? "_blank" : undefined}
+        rel={href ? "noopener noreferrer" : undefined}
         className={cn("block cursor-pointer", className)}
       >
         {video && (
@@ -103,7 +105,7 @@ export function ProjectCard({
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-2">
             {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
+              <Link href={link?.href} key={idx} target="_blank" rel="noopener noreferrer">
                 <Badge key={idx} className="flex gap-2 px-3 py-1.5 text-xs hover:bg-primary/90 transition-colors">
                   {link.icon}
                   {link.type}
