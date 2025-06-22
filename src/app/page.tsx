@@ -85,7 +85,7 @@ export default function Page() {
                       href={DATA.resumeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                      className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 transition-colors"
                     >
                       View Resume
                     </Link>
@@ -234,34 +234,6 @@ export default function Page() {
                 />
               </BlurFade>
             ))}
-          </div>
-        </section>
-
-        {/* Resume Section */}
-        <section id="resume">
-          <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-            <BlurFade delay={BLUR_FADE_DELAY * 17}>
-              <div className="space-y-3">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Resume
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Download My Resume
-                </h2>
-                <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Click the button below to download my resume.
-                </p>
-                <a
-                  href={DATA.resumeUrl}
-                  download="Akash_Vinchankar_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-600 transition"
-                >
-                  Download Resume
-                </a>
-              </div>
-            </BlurFade>
           </div>
         </section>
 
