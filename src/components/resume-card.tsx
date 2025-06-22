@@ -143,6 +143,8 @@ export const ResumeCard = ({
                           className="size-3"
                           width={12}
                           height={12}
+                          loading="lazy"
+                          sizes="12px"
                         />
                         {index < 3 && skills.length > index + 1 && (
                           <span className="mx-1 text-muted-foreground/40">
@@ -211,6 +213,8 @@ export const ResumeCard = ({
                           className="size-3"
                           width={12}
                           height={12}
+                          loading="lazy"
+                          sizes="12px"
                         />
                         {skill.name}
                       </Badge>

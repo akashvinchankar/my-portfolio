@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
+import { WebVitals } from "@/components/web-vitals";
 import { cn } from "@/lib/utils";
 import { DATA } from "@/data/resume";
 
@@ -95,6 +96,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Resource hints for performance */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://media.licdn.com" />
+        <link rel="dns-prefetch" href="https://companieslogo.com" />
+        <link rel="dns-prefetch" href="https://encrypted-tbn0.gstatic.com" />
+        
+        {/* Preload critical assets */}
+        <link rel="preload" href="/picofme.png" as="image" type="image/png" />
+        
+        {/* Performance hints */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6 lg:px-8",
@@ -109,6 +126,7 @@ export default function RootLayout({
           disableTransitionOnChange={false}
         >
           <TooltipProvider delayDuration={0}>
+            <WebVitals />
             {children}
             <Navbar />
           </TooltipProvider>

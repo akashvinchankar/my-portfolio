@@ -100,7 +100,11 @@ export default function Page() {
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <Avatar className="size-40 border lg:size-48">
                   <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
-                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarImage 
+                    alt={DATA.name} 
+                    src={DATA.avatarUrl}
+                    className="object-cover"
+                  />
                   <AvatarFallback>{DATA.initials}</AvatarFallback>
                 </Avatar>
               </BlurFade>
@@ -234,6 +238,8 @@ export default function Page() {
                       className="size-3 sm:size-4"
                       width={16}
                       height={16}
+                      loading="lazy"
+                      sizes="16px"
                     />
                     {skill.name}
                   </Badge>
