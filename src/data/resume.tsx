@@ -41,7 +41,7 @@ export const DATA = {
   url: "https://akashvinchankar.dev",
   location: "Mumbai, Maharashtra, India",
   locationLink: "https://www.google.com/maps/place/mumbai",
-  description: `Frontend React Developer with ${experience.totalText} of experience building modern web applications using React.js, TypeScript, and modern frontend technologies.`,
+  description: `Frontend React Developer with ${experience.totalText} building modern web applications with React.js & TypeScript.`,
   summary: `Frontend React Developer with **${experience.totalText}** of experience specializing in React.js, TypeScript, and modern frontend technologies. Expert in building responsive, user-friendly web applications with focus on performance optimization, state management, and exceptional user experiences. Passionate about clean code, component architecture, and staying current with the latest frontend trends and best practices.`,
   avatarUrl: "/picofme.png",
   resumeUrl:
