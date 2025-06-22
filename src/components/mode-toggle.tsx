@@ -27,7 +27,7 @@ export function ModeToggle() {
         className="px-2"
         disabled
       >
-        <SunIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800" />
+        <SunIcon className="size-4 lg:size-5 text-neutral-800" />
       </Button>
     );
   }
@@ -41,9 +41,9 @@ export function ModeToggle() {
       onClick={handleToggle}
     >
       {resolvedTheme === "dark" ? (
-        <SunIcon className="h-[1.2rem] w-[1.2rem] text-neutral-200" />
+        <SunIcon className="size-4 lg:size-5 text-neutral-200" />
       ) : (
-        <MoonIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800" />
+        <MoonIcon className="size-4 lg:size-5 text-neutral-800" />
       )}
     </Button>
   );

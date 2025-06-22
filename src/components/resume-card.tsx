@@ -53,6 +53,7 @@ export const ResumeCard = ({
 
   const isExternalLink = href && href.startsWith("http");
   const hasContent = description || (skills && skills.length > 0);
+  const isWrappedInLink = href && !hasContent;
 
   const CardContent = () => (
     <Card
@@ -72,10 +73,10 @@ export const ResumeCard = ({
         <CardHeader className="p-0">
           <div className="flex items-center justify-between gap-x-2 text-base">
             <div className="flex items-center gap-x-2">
-              <h3 className="font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="font-semibold leading-none text-sm sm:text-base">
                 {title}
               </h3>
-              {href && !hasContent && (
+              {href && !hasContent && !isWrappedInLink && (
                 <Link
                   href={href}
                   target={isExternalLink ? "_blank" : undefined}
@@ -86,11 +87,14 @@ export const ResumeCard = ({
                   <ChevronRightIcon className="size-4" />
                 </Link>
               )}
+              {isWrappedInLink && (
+                <ChevronRightIcon className="size-4 text-blue-500" />
+              )}
               {hasContent && (
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-500/10 hover:bg-blue-500/20 transition-all duration-200 cursor-pointer"
+                  className="flex items-center justify-center size-6 rounded-full bg-blue-500/10 hover:bg-blue-500/20 transition-all duration-200 cursor-pointer"
                 >
                   <motion.div
                     initial={{ rotate: 0 }}
@@ -106,27 +110,27 @@ export const ResumeCard = ({
                 </motion.div>
               )}
             </div>
-            <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+            <div className="text-sm sm:text-base tabular-nums text-muted-foreground text-right">
               {period}
             </div>
           </div>
           {subtitle && (
-            <div className="font-sans text-xs text-muted-foreground mt-1">
+            <div className="text-sm text-muted-foreground mt-1">
               {subtitle}
             </div>
           )}
           {hasContent && !isExpanded && (
-            <div className="flex items-center gap-3 mt-2 text-xs text-muted-foreground/60">
+            <div className="flex items-center gap-3 mt-2 text-sm text-muted-foreground/60">
               {description && (
                 <div className="flex items-center gap-1">
-                  <div className="w-1 h-1 rounded-full bg-blue-500"></div>
+                  <div className="size-1 rounded-full bg-blue-500"></div>
                   <FileTextIcon className="size-3" />
                   <span>Details</span>
                 </div>
               )}
               {skills && skills.length > 0 && (
                 <div className="flex items-center gap-1">
-                  <div className="w-1 h-1 rounded-full bg-green-500"></div>
+                  <div className="size-1 rounded-full bg-green-500"></div>
                   <CodeIcon className="size-3" />
                   <span>{skills.length} Skills</span>
                   {/* Preview of first 3 skills */}
@@ -136,7 +140,7 @@ export const ResumeCard = ({
                         <Image
                           src={skill.icon}
                           alt={skill.name}
-                          className="w-3 h-3"
+                          className="size-3"
                           width={12}
                           height={12}
                         />
@@ -169,7 +173,7 @@ export const ResumeCard = ({
               duration: 0.4,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="px-0 pb-4 text-xs sm:text-sm text-muted-foreground w-full"
+            className="px-0 pb-4 text-sm sm:text-base text-muted-foreground w-full"
             style={{ overflow: "hidden" }}
           >
             <div className="border-l-2 border-muted pl-4 mt-3">
@@ -191,7 +195,7 @@ export const ResumeCard = ({
               )}
               {skills && skills.length > 0 && (
                 <div className="space-y-2">
-                  <h4 className="text-xs font-semibold text-foreground">
+                  <h4 className="text-sm font-semibold text-foreground">
                     Technologies & Skills:
                   </h4>
                   <div className="flex flex-wrap gap-2">
@@ -204,7 +208,7 @@ export const ResumeCard = ({
                         <Image
                           src={skill.icon}
                           alt={skill.name}
-                          className="w-3 h-3"
+                          className="size-3"
                           width={12}
                           height={12}
                         />

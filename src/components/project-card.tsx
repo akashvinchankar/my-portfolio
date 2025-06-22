@@ -131,7 +131,7 @@ export function ProjectCard({
               <div className="flex flex-wrap gap-1.5">
                 {tags?.map((tag) => (
                   <Badge
-                    className="px-2 py-1 text-[10px] font-medium bg-secondary/80 hover:bg-secondary transition-colors flex items-center gap-1 text-center justify-center min-w-[80px]"
+                    className="px-2 py-1 text-xs font-medium bg-secondary/80 hover:bg-secondary transition-colors flex items-center gap-1 text-center justify-center min-w-[80px]"
                     variant="secondary"
                     key={tag}
                   >
@@ -140,7 +140,7 @@ export function ProjectCard({
                       alt={tag}
                       width={12}
                       height={12}
-                      className="w-3 h-3"
+                      className="size-3"
                     />
                     {tag}
                   </Badge>

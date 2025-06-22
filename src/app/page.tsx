@@ -82,7 +82,7 @@ export default function Page() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors gap-2"
                     >
-                      <Icons.linkedin className="w-4 h-4" />
+                      <Icons.linkedin className="size-4 lg:size-5" />
                       Connect on LinkedIn
                     </Link>
                     <Link
@@ -91,7 +91,7 @@ export default function Page() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 transition-colors gap-2"
                     >
-                      <Icons.fileText className="w-4 h-4" />
+                      <Icons.fileText className="size-4 lg:size-5" />
                       View Resume
                     </Link>
                   </div>
@@ -114,7 +114,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">About</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            <div className="prose max-w-full text-pretty text-base text-muted-foreground dark:prose-invert">
               <Markdown
                 components={{
                   p: ({ children }) => {
@@ -231,7 +231,7 @@ export default function Page() {
                     <Image
                       src={skill.icon}
                       alt={skill.name}
-                      className="w-4 h-4"
+                      className="size-3 sm:size-4"
                       width={16}
                       height={16}
                     />
@@ -305,11 +305,11 @@ export default function Page() {
                     text={DATA.contact.email}
                     className="min-w-[250px]"
                   >
-                    <Icons.email className="w-4 h-4" />
+                    <Icons.email className="size-4 lg:size-5" />
                     {DATA.contact.email}
                   </CopyButton>
                   <CopyButton text={DATA.contact.tel} className="min-w-[200px]">
-                    <Icons.phone className="w-4 h-4" />
+                    <Icons.phone className="size-4 lg:size-5" />
                     {DATA.contact.tel}
                   </CopyButton>
                 </div>
