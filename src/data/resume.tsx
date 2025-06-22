@@ -290,6 +290,7 @@ export const DATA = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjX-srnJfEjGnuBKuy2A-wJzWgvNDSKATVlg&s",
       start: "2017",
       end: "2021",
+      cgpa: "9.2",
     },
   ],
   projects: [

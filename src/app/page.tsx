@@ -259,7 +259,7 @@ export default function Page() {
                     logoUrl={education.logoUrl}
                     altText={education.school}
                     title={education.school}
-                    subtitle={education.degree}
+                    subtitle={`${education.degree} • CGPA: ${education.cgpa}/10.0`}
                     href={education.href}
                     period={`${education.start} - ${education.end}`}
                   />
