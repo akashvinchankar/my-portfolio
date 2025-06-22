@@ -158,9 +158,10 @@ export default function Page() {
                     Check out my latest work
                   </h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    I&apos;ve worked on a variety of projects, from simple
-                    websites to complex web applications. Here are a few of my
-                    favorites.
+                    Here are some projects I've built using React.js,
+                    TypeScript, and modern frontend technologies. Each project
+                    showcases different aspects of frontend development and user
+                    experience design.
                   </p>
                 </div>
               </div>
@@ -190,7 +191,7 @@ export default function Page() {
         <section id="skills">
           <div className="flex min-h-0 flex-col gap-y-3">
             <BlurFade delay={BLUR_FADE_DELAY * 9}>
-              <h2 className="text-xl font-bold">Skills</h2>
+              <h2 className="text-xl font-bold">Technical Skills</h2>
             </BlurFade>
             <div className="flex flex-wrap gap-2">
               {DATA.skills.map((skill, id) => (
@@ -200,7 +201,7 @@ export default function Page() {
                 >
                   <Badge
                     variant="secondary"
-                    className="flex items-center gap-2 py-2 px-3"
+                    className="flex items-center gap-2 py-2 px-3 hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                   >
                     <Image
                       src={skill.icon}
@@ -220,13 +221,13 @@ export default function Page() {
         {/* Education Section */}
         <section id="education">
           <div className="flex min-h-0 flex-col gap-y-3">
-            <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <BlurFade delay={BLUR_FADE_DELAY * 11}>
               <h2 className="text-xl font-bold">Education</h2>
             </BlurFade>
             {DATA.education.map((education, id) => (
               <BlurFade
                 key={education.school}
-                delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
                 <ResumeCard
                   logoUrl={education.logoUrl}
@@ -298,10 +299,12 @@ export default function Page() {
                 {/* Copyright and Built Info */}
                 <div className="flex flex-col items-center gap-2">
                   <p className="text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} {DATA.name}. All rights reserved.
+                    © {new Date().getFullYear()} {DATA.name}. All rights
+                    reserved.
                   </p>
                   <p className="text-xs text-muted-foreground/70 flex items-center gap-1">
-                    Built with <span className="text-red-500">❤️</span> using Next.js, TypeScript & Tailwind CSS
+                    Built with <span className="text-red-500">❤️</span> using
+                    Next.js, TypeScript & Tailwind CSS
                   </p>
                 </div>
               </div>
