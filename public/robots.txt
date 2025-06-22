@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://akashvinchankar.dev
+
+# Sitemaps
+Sitemap: https://akashvinchankar.dev/sitemap.xml
