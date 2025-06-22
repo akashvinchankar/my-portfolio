@@ -41,8 +41,8 @@ export const DATA = {
   url: "https://akashvinchankar.dev",
   location: "Mumbai, Maharashtra, India",
   locationLink: "https://www.google.com/maps/place/mumbai",
-  description: `Frontend Developer | React.js Specialist | ${experience.totalText} of experience | Building Digital Experiences with passion and precision.`,
-  summary: `I'm a passionate Frontend Developer with **${experience.totalText}** of experience crafting beautiful, responsive, and user-friendly web applications. I specialize in React.js and modern web technologies. My journey in web development started with a curiosity about how websites work, and it has evolved into a passion for creating digital experiences that make a difference. I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends.`,
+  description: `Frontend React Developer with ${experience.totalText} of experience building modern web applications using React.js, TypeScript, and modern frontend technologies.`,
+  summary: `Frontend React Developer with **${experience.totalText}** of experience specializing in React.js, TypeScript, and modern frontend technologies. Expert in building responsive, user-friendly web applications with focus on performance optimization, state management, and exceptional user experiences. Passionate about clean code, component architecture, and staying current with the latest frontend trends and best practices.`,
   avatarUrl: "/picofme.png",
   resumeUrl:
     "https://drive.google.com/file/d/1JxgxWRdWZvBs8TqqdMnvIezy5VromKh-/view",
@@ -60,11 +60,15 @@ export const DATA = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     },
     {
-      name: "HTML",
+      name: "Next.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
+    {
+      name: "HTML5",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     },
     {
-      name: "CSS",
+      name: "CSS3",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     },
     {
@@ -88,24 +92,20 @@ export const DATA = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
     },
     {
-      name: "Golang",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+      name: "Material UI",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
     },
     {
-      name: "PostgreSQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    },
-    {
-      name: "RESTful APIs",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      name: "Responsive Design",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     },
     {
       name: "Performance Optimization",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
     },
     {
-      name: "Responsive Design",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      name: "Jest Testing",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
     },
     {
       name: "Git",
@@ -119,11 +119,23 @@ export const DATA = {
       name: "JIRA",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
     },
+    {
+      name: "RESTful APIs",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      name: "Golang",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    },
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
     email: "akashvinchankar@gmail.com",
-    tel: "+91 96043 46378",
+    tel: "+91 9604346378",
     social: {
       email: {
         name: "Send Email",
@@ -156,15 +168,15 @@ export const DATA = {
     {
       company: "Qubecinema Technologies Pvt. Ltd",
       href: "https://www.qubecinema.com/",
-      badges: ["React.js", "TypeScript", "SCSS", "Golang"],
+      badges: ["React.js", "TypeScript", "Material UI", "SCSS"],
       location: "Mumbai, India",
-      title: "Associate Software Engineer",
+      title: "Frontend Developer",
       logoUrl:
         "https://media.licdn.com/dms/image/v2/C510BAQEK_yAFtVSNFg/company-logo_200_200/company-logo_200_200/0/1630627571909/qube_cinema_media_technologies_pvt_ltd_logo?e=2147483647&v=beta&t=iVLblLxP2AW0WglJl8CLrhrla-cwkkKzEysMov85rtM",
       start: "Dec 2022",
       end: "Present",
       description:
-        "– Built scalable modules in Qube Slate platform using React.js, TypeScript, and SCSS – Migrated class components to functional components and custom hooks for cleaner architecture – Improved API performance via caching and optimized state handling, reducing server load by 30% – Developed reusable UI components and responsive patterns, cutting development time by 25% – Created performant API services via Golang microservices and SQL optimization – Documented features and incorporated business feedback, increasing user satisfaction by 35%",
+        "– Built responsive frontend modules for Qube Slate platform using React.js, TypeScript, and Material UI – Migrated class components to functional components with custom hooks for better performance – Optimized frontend performance and state management, improving user experience by 35% – Developed reusable UI component library with responsive design patterns – Integrated with RESTful APIs and collaborated with backend teams on Golang microservices",
       skills: [
         {
           name: "React.js",
@@ -179,12 +191,8 @@ export const DATA = {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
         },
         {
-          name: "Golang",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
-        },
-        {
-          name: "PostgreSQL",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+          name: "Material UI",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
         },
         {
           name: "Performance Optimization",
@@ -193,6 +201,14 @@ export const DATA = {
         {
           name: "Git",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        },
+        {
+          name: "RESTful APIs",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        },
+        {
+          name: "Golang",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
         },
       ],
     },
@@ -207,7 +223,7 @@ export const DATA = {
       start: "Oct 2021",
       end: "Nov 2022",
       description:
-        "– Developed a React.js + Redux dashboard with responsive layouts and dynamic charts – Implemented automated tests with Jest and CI/CD workflows, reducing QA bugs by 30% – Collaborated with backend teams to streamline REST API integration and optimize UX – Enhanced codebase readability and maintainability through pre-deployment checks – Improved project delivery times through effective cross-functional collaboration",
+        "– Developed a React.js + Redux dashboard with responsive layouts and dynamic charts – Implemented automated tests with Jest and CI/CD workflows, reducing QA bugs by 30% – Collaborated with backend teams to integrate RESTful APIs and optimize user experience",
       skills: [
         {
           name: "React.js",
@@ -237,6 +253,10 @@ export const DATA = {
           name: "Responsive Design",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         },
+        {
+          name: "RESTful APIs",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        },
       ],
     },
   ],
@@ -258,7 +278,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A comprehensive movie library application with features like 'Add to Favorites' and sorting based on ratings, popularity, and genre. Built using React.js, Axios, and the open-source Movies API.",
+        "React.js movie discovery platform with client-side routing, debounced search, and performance optimizations.",
       technologies: ["React.js", "JavaScript", "Axios", "TMDB API", "CSS"],
       links: [
         {
@@ -281,12 +301,12 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A clone of the popular video-sharing platform YouTube. Built using React.js, Redux Toolkit, and the YouTube Data API with complete video streaming capabilities.",
+        "YouTube clone with React.js, Redux Toolkit, and YouTube Data API featuring complete video streaming.",
       technologies: [
         "React.js",
         "Redux Toolkit",
         "Axios",
-        "YouTube API",
+        "YT API",
         "CSS",
       ],
       links: [
@@ -310,7 +330,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "An interactive web application to browse and search various drink recipes using keywords. Built using React.js and the Context API for state management.",
+        "Progressive web app with React.js and Context API featuring dynamic filtering and mobile-first design.",
       technologies: ["React.js", "JavaScript", "Axios", "Context API", "CSS"],
       links: [
         {
@@ -333,7 +353,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A web application for seeing the prices of heavy machinery and equipment. Built using React.js, Axios, and scraping data from the web for real-time pricing information.",
+        "Web application for heavy machinery pricing with React.js, real-time data scraping, and equipment listings.",
       technologies: ["React.js", "JavaScript", "Axios", "Web Scraping", "CSS"],
       links: [
         {

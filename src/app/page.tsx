@@ -1,6 +1,7 @@
 import { DATA } from "@/data/resume";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { CopyButton } from "@/components/copy-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import BlurFade from "@/components/magicui/blur-fade";
@@ -271,24 +272,37 @@ export default function Page() {
                   and I&apos;ll respond whenever I can. I will ignore all
                   soliciting.
                 </p>
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-6">
+                  <CopyButton
+                    text={DATA.contact.email}
+                    className="min-w-[250px]"
+                  >
+                    <Icons.email className="w-4 h-4" />
+                    {DATA.contact.email}
+                  </CopyButton>
+                  <CopyButton text={DATA.contact.tel} className="min-w-[200px]">
+                    <Icons.phone className="w-4 h-4" />
+                    {DATA.contact.tel}
+                  </CopyButton>
+                </div>
               </div>
             </BlurFade>
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-border/40">
-          <div className="container mx-auto px-4 py-6">
+        <footer className="border-t border-border/20 bg-muted/20">
+          <div className="container mx-auto px-4 py-8">
             <BlurFade delay={BLUR_FADE_DELAY * 19}>
-              <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-                <div className="flex items-center space-x-2">
+              <div className="flex flex-col items-center justify-center gap-6 text-center">
+                {/* Copyright and Built Info */}
+                <div className="flex flex-col items-center gap-2">
                   <p className="text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} {DATA.name}. All rights
-                    reserved.
+                    © {new Date().getFullYear()} {DATA.name}. All rights reserved.
                   </p>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Built with ❤️ using Next.js, TypeScript & Tailwind CSS
+                  <p className="text-xs text-muted-foreground/70 flex items-center gap-1">
+                    Built with <span className="text-red-500">❤️</span> using Next.js, TypeScript & Tailwind CSS
+                  </p>
                 </div>
               </div>
             </BlurFade>
