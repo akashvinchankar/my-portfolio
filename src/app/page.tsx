@@ -1,4 +1,4 @@
-import { DATA } from "@/data/resume";
+import { DATA, calculateExperience } from "@/data/resume";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { CopyButton } from "@/components/copy-button";
@@ -49,6 +49,9 @@ const jsonLd = {
 };
 
 export default function Page() {
+  const experience = calculateExperience();
+  const dynamicSummary = `Frontend React Developer with **${experience.totalText}** of experience specializing in React.js, JavaScript, TypeScript, and modern frontend technologies. Expert in building responsive, user-friendly web applications with focus on performance optimization, state management, and exceptional user experiences. Passionate about clean code, component architecture, and staying current with the latest frontend trends and best practices.`;
+
   return (
     <>
       {/* Structured Data */}
@@ -100,8 +103,8 @@ export default function Page() {
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <Avatar className="size-40 border lg:size-48">
                   <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
-                  <AvatarImage 
-                    alt={DATA.name} 
+                  <AvatarImage
+                    alt={DATA.name}
                     src={DATA.avatarUrl}
                     className="object-cover"
                   />
@@ -140,7 +143,7 @@ export default function Page() {
                   },
                 }}
               >
-                {DATA.summary}
+                {dynamicSummary}
               </Markdown>
             </div>
           </BlurFade>

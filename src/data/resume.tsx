@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, MailIcon } from "lucide-react";
 
 // Calculate dynamic experience since October 2021
-function calculateExperience(): {
+export function calculateExperience(): {
   years: number;
   months: number;
   totalText: string;
@@ -36,8 +36,8 @@ function calculateExperience(): {
 const experience = calculateExperience();
 
 // Helper function to get YOE text with styling
-export const getStyledYOE = () => experience.totalText;
-export const getPlainYOE = () => experience.totalText;
+export const getStyledYOE = () => calculateExperience().totalText;
+export const getPlainYOE = () => calculateExperience().totalText;
 
 export const DATA = {
   name: "Akash Vinchankar",
