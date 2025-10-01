@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
+import { BackToTop } from "@/components/back-to-top";
+import { BackgroundParticles } from "@/components/background-particles";
 import { WebVitals } from "@/components/web-vitals";
 import { cn } from "@/lib/utils";
 import { DATA } from "@/data/resume";
@@ -100,14 +102,16 @@ export default function RootLayout({
         {/* Resource hints for performance */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
         <link rel="dns-prefetch" href="https://media.licdn.com" />
         <link rel="dns-prefetch" href="https://companieslogo.com" />
         <link rel="dns-prefetch" href="https://encrypted-tbn0.gstatic.com" />
-        
         {/* Preload critical assets */}
         <link rel="preload" href="/picofme.png" as="image" type="image/png" />
-        
         {/* Performance hints */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
@@ -125,10 +129,12 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange={false}
         >
+          <BackgroundParticles />
           <TooltipProvider delayDuration={0}>
             <WebVitals />
             {children}
             <Navbar />
+            <BackToTop />
           </TooltipProvider>
         </ThemeProvider>
       </body>
