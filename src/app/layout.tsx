@@ -18,13 +18,13 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://akashvinchankar.dev"),
   title: {
-    default: "Akash Vinchankar - Frontend Developer",
+    default: "Akash Vinchankar - Full Stack Developer",
     template: "%s | Akash Vinchankar",
   },
   description: DATA.description,
   keywords: [
     "Akash Vinchankar",
-    "Frontend Developer",
+    "Full Stack Developer",
     "React.js Developer",
     "TypeScript",
     "JavaScript",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://akashvinchankar.dev",
-    title: "Akash Vinchankar - Frontend Developer",
+    title: "Akash Vinchankar - Full Stack Developer",
     description: DATA.description,
     siteName: "Akash Vinchankar Portfolio",
     images: [
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
         url: "/picofme.png",
         width: 1200,
         height: 630,
-        alt: "Akash Vinchankar - Frontend Developer",
+        alt: "Akash Vinchankar - Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akash Vinchankar - Frontend Developer",
+    title: "Akash Vinchankar - Full Stack Developer",
     description: DATA.description,
     images: ["/picofme.png"],
     creator: "@akashvinchankar",
