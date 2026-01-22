@@ -2,7 +2,7 @@ import { DATA, calculateExperience } from "@/data/resume";
 
 export function StyledDescription() {
   const experience = calculateExperience();
-  const description = `Frontend React Developer with ${experience.totalText} building modern web applications with React.js, JavaScript & TypeScript.`;
+  const description = `Full Stack Developer with ${experience.totalText} building modern web applications with React.js, Next.js, Go & PostgreSQL.`;
 
   // Replace YOE pattern with styled version
   const styledDescription = description.replace(

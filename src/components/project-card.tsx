@@ -33,6 +33,13 @@ const getTechIcon = (techName: string) => {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "Web Scraping":
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "Go": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
+    "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    "Next.js 15": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    "Shadcn UI": "https://avatars.githubusercontent.com/u/139895814?s=200&v=4",
+    "Zustand": "https://raw.githubusercontent.com/pmndrs/zustand/main/examples/demo/public/logo192.png",
+    "Gin": "https://raw.githubusercontent.com/gin-gonic/logo/master/color.png",
+    "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   };
   return (
     iconMap[techName] ||
@@ -102,7 +109,7 @@ export function ProjectCard({
               alt={title}
               width={500}
               height={300}
-              className="h-40 w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+              className="h-80 w-full object-contain object-top transition-transform duration-300 group-hover:scale-105 bg-black/5"
               loading="lazy"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               placeholder="blur"

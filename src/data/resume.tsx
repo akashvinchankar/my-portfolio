@@ -41,11 +41,11 @@ export const DATA = {
   name: "Akash Vinchankar",
   initials: "AV",
   url: "https://akashvinchankar.dev",
-  location: "Mumbai, Maharashtra, India",
-  locationLink: "https://www.google.com/maps/place/mumbai",
-  description: `Frontend React Developer with 3+ YOE building modern web applications with React.js, JavaScript & TypeScript.`,
-  summary: `Frontend React Developer with **3+ YOE** of experience specializing in React.js, JavaScript, TypeScript, and modern frontend technologies. Expert in building responsive, user-friendly web applications with focus on performance optimization, state management, and exceptional user experiences. Passionate about clean code, component architecture, and staying current with the latest frontend trends and best practices.`,
-  styledDescription: `Frontend React Developer with <span class="text-blue-600 font-semibold">3+ YOE</span> building modern web applications with React.js, JavaScript & TypeScript.`,
+  location: "Pune, Maharashtra, India",
+  locationLink: "https://www.google.com/maps/place/pune",
+  description: `Full Stack Developer with 3+ YOE building modern web applications with React.js, Next.js, Go, PostgreSQL, and AWS.`,
+  summary: `Full Stack Developer with **3+ YOE** of experience building scalable applications using React.js, Next.js, Go, PostgreSQL, and AWS. Expert in designing decoupled architectures, optimizing performance, and delivering exceptional user experiences. Passionate about clean code, distributed systems, and modern web standards.`,
+  styledDescription: `Full Stack Developer with <span class="text-blue-600 font-semibold">3+ YOE</span> building scalable apps with React.js, Next.js, Go & AWS.`,
   avatarUrl: "/picofme.png",
   resumeUrl:
     "https://drive.google.com/file/d/1JxgxWRdWZvBs8TqqdMnvIezy5VromKh-/view",
@@ -131,6 +131,10 @@ export const DATA = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
     },
     {
+      name: "AWS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    },
+    {
       name: "PostgreSQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     },
@@ -171,70 +175,50 @@ export const DATA = {
     {
       company: "Qubecinema Technologies Pvt. Ltd",
       href: "https://www.qubecinema.com/",
-      badges: ["React.js", "TypeScript", "Material UI", "SCSS"],
+      badges: ["React.js", "TypeScript", "Golang", "AWS", "PostgreSQL"],
       location: "Chennai, India",
-      title: "Software Engineer - Frontend",
+      title: "Software Engineer (Full Stack)",
       logoUrl:
         "https://media.licdn.com/dms/image/v2/C510BAQEK_yAFtVSNFg/company-logo_200_200/company-logo_200_200/0/1630627571909/qube_cinema_media_technologies_pvt_ltd_logo?e=2147483647&v=beta&t=iVLblLxP2AW0WglJl8CLrhrla-cwkkKzEysMov85rtM",
       start: "Dec 2022",
       end: "Present",
       description:
-        "– Built responsive frontend modules for Qube Slate platform using React.js, TypeScript, and Material UI – Migrated class components to functional components with custom hooks for better performance – Optimized frontend performance and state management, improving user experience by 35% – Developed reusable UI component library with responsive design patterns – Integrated with RESTful APIs and collaborated with backend teams on Golang microservices",
+        "– Developed and maintained full-stack modules for Qube Slate using React.js, TypeScript, Golang, and TailwindCSS – Designed and implemented a report generation and scheduling system using backend cron jobs and AWS services for automated report delivery and notifications - Implemented email notification workflows and message queuing using AWS SQS and SNS; used S3 for report storage and EC2 for background workers when necessary – Owned API development and optimization tasks—designing RESTful endpoints in Golang (Gin + GORM), improving query performance, and adding caching where appropriate – Built a comprehensive edit-logging / audit mechanism across the application to capture changes, support traceability, and assist debugging – Implemented robust logging and monitoring practices for campaign workflows and reporting pipelines to improve reliability",
       skills: [
         {
           name: "React.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         },
         {
-          name: "TypeScript",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+          name: "Golang",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
         },
         {
-          name: "SCSS",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+          name: "AWS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        },
+        {
+          name: "TypeScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
         },
         {
           name: "Material UI",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
         },
         {
-          name: "Performance Optimization",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
-        },
-        {
           name: "Git",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-        },
-        {
-          name: "RESTful APIs",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        },
-        {
-          name: "Golang",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
-        },
-        {
-          name: "JavaScript",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        },
-        {
-          name: "Redux Toolkit",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-        },
-        {
-          name: "Webpack",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
-        },
-        {
-          name: "Jest",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
         },
       ],
     },
     {
       company: "Cognizant Technologies Pvt. Ltd",
       href: "https://www.cognizant.com/",
-      badges: ["React.js", "Redux Toolkit", "Tailwind CSS"],
+      badges: ["React.js", "Redux Toolkit", "Ant Design"],
       location: "Pune, India",
       title: "Programmer Analyst",
       logoUrl:
@@ -242,39 +226,23 @@ export const DATA = {
       start: "Oct 2021",
       end: "Nov 2022",
       description:
-        "– Developed a React.js + Redux dashboard with responsive layouts and dynamic charts – Implemented automated tests with Jest and CI/CD workflows, reducing QA bugs by 30% – Collaborated with backend teams to integrate RESTful APIs and optimize user experience",
+        "– Built interactive dashboards using React.js and Redux with responsive layouts and data visualizations – Implemented Jest test suites and CI/CD workflows to improve release quality – Collaborated with backend teams to design and consume RESTful APIs and optimize integration points",
       skills: [
         {
           name: "React.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         },
         {
-          name: "Redux Toolkit",
+          name: "Redux",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-        },
-        {
-          name: "Tailwind CSS",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
         },
         {
           name: "JavaScript",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
         {
-          name: "CSS",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        },
-        {
-          name: "HTML",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        },
-        {
-          name: "Responsive Design",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-        },
-        {
-          name: "RESTful APIs",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+          name: "Jest",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
         },
       ],
     },
@@ -293,13 +261,44 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Bech-Do Marketplace (Full Stack)",
+      href: "https://bech-do.vercel.app/",
+      dates: "Jan 2024 - Present",
+      active: true,
+      description:
+        "Full-stack marketplace built with Next.js 15 (App Router) on the frontend and Golang (Gin + GORM) on the backend. Implemented JWT-based authentication, role-based access, product management, and real-time buyer-seller chat.",
+      technologies: [
+        "Next.js 15",
+        "React.js",
+        "Golang",
+        "Gin",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://bech-do.vercel.app/",
+          icon: <Icons.globe className="size-4" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/akashvinchankar/bech-do",
+          icon: <Icons.github className="size-4" />,
+        },
+      ],
+      image: "/bech-do.png",
+      video: "",
+    },
+    {
       title: "Movies Directory App (TMDB)",
       href: "https://imdb-akashv.netlify.app/",
       dates: "",
       active: true,
       description:
-        "React.js movie discovery platform with client-side routing, debounced search, and performance optimizations.",
-      technologies: ["React.js", "JavaScript", "Axios", "TMDB API", "CSS"],
+        "Movie discovery platform built with React.js, Axios, and Material UI; implemented lazy loading, route-based code splitting, and performance optimizations.",
+      technologies: ["React.js", "Axios", "Material UI", "TMDB API", "CSS"],
       links: [
         {
           type: "Website",
@@ -316,36 +315,13 @@ export const DATA = {
       video: "",
     },
     {
-      title: "YouTube Clone",
-      href: "https://tube-akash-v.netlify.app/",
-      dates: "",
-      active: true,
-      description:
-        "YouTube clone with React.js, Redux Toolkit, and YouTube Data API featuring complete video streaming.",
-      technologies: ["React.js", "Redux Toolkit", "Axios", "YT API", "CSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://tube-akash-v.netlify.app/",
-          icon: <Icons.globe className="size-4" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/akashvinchankar/tube-akash",
-          icon: <Icons.github className="size-4" />,
-        },
-      ],
-      image: "/YTClone.png",
-      video: "",
-    },
-    {
-      title: "Cocktails Directory",
+      title: "Cocktails Directory Platform",
       href: "https://cocktails-directory-akv.netlify.app/",
       dates: "",
       active: true,
       description:
-        "Progressive web app with React.js and Context API featuring dynamic filtering and mobile-first design.",
-      technologies: ["React.js", "JavaScript", "Axios", "Context API", "CSS"],
+        "Progressive Web App using React.js and Context API with dynamic filtering and mobile-first design.",
+      technologies: ["React.js", "Context API", "Axios", "CSS"],
       links: [
         {
           type: "Website",
@@ -359,29 +335,6 @@ export const DATA = {
         },
       ],
       image: "/Cocktail.png",
-      video: "",
-    },
-    {
-      title: "The Taravu",
-      href: "https://thetaravu.com/",
-      dates: "",
-      active: true,
-      description:
-        "Web application for heavy machinery pricing with React.js, real-time data scraping, and equipment listings.",
-      technologies: ["React.js", "JavaScript", "Axios", "Web Scraping", "CSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://thetaravu.com/",
-          icon: <Icons.globe className="size-4" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/akashvinchankar/bid-my-asset",
-          icon: <Icons.github className="size-4" />,
-        },
-      ],
-      image: "/thetaravu.png",
       video: "",
     },
   ],
