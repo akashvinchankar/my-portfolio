@@ -128,7 +128,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="flex flex-col min-h-[100dvh] space-y-12 lg:space-y-16">
+      <main className="flex flex-col min-h-[100dvh] space-y-12 lg:space-y-16 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <section id="hero" className="py-12 md:py-32 relative">
           <div className="mx-auto w-full max-w-7xl space-y-16">
@@ -138,13 +138,13 @@ export default function Page() {
               <div className="flex-col flex flex-1 space-y-8 text-center md:text-left z-10">
                 <BlurFadeText
                   delay={BLUR_FADE_DELAY}
-                  className="text-6xl font-extrabold tracking-tight sm:text-7xl xl:text-8xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 pb-4"
+                  className="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl xl:text-8xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 pb-4 break-words"
                   yOffset={8}
                   text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
                 />
                 
                 <BlurFade delay={BLUR_FADE_DELAY}>
-                  <p className="max-w-[600px] text-xl md:text-2xl text-muted-foreground mx-auto md:mx-0 leading-relaxed font-light">
+                  <p className="max-w-[600px] text-lg sm:text-xl md:text-2xl text-muted-foreground mx-auto md:mx-0 leading-relaxed font-light">
                     <StyledDescription />
                   </p>
                 </BlurFade>
@@ -268,7 +268,7 @@ export default function Page() {
               </div>
             </BlurFade>
             
-            <div className="relative max-w-4xl mx-auto pl-6 md:pl-0">
+            <div className="relative w-full sm:max-w-4xl mx-auto pl-4 sm:pl-6 md:pl-0">
               {/* Timeline Line */}
               <div className="absolute left-6 md:left-[50%] top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
               <div className="absolute left-6 top-0 bottom-0 w-px bg-border -translate-x-1/2 md:hidden" />
@@ -279,13 +279,13 @@ export default function Page() {
                     key={work.company}
                     delay={BLUR_FADE_DELAY * 6 + id * 0.05}
                   >
-                    <div className="relative grid md:grid-cols-2 gap-8 md:gap-12 items-start group">
+                    <div className="relative flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-start group">
                       {/* Timeline Dot */}
                       <div className="absolute left-6 md:left-[50%] top-0 size-4 rounded-full border-4 border-background bg-primary -translate-x-1/2 mt-1.5 z-10 shadow-sm" />
 
                       {/* Content Area - Left/Right alternating for desktop */}
                       <div className={cn(
-                        "relative space-y-2 md:text-right md:pr-12 col-start-1 md:row-start-1", 
+                        "hidden md:block relative space-y-2 md:text-right md:pr-12 col-start-1 md:row-start-1", 
                         id % 2 === 0 ? "md:block" : "md:hidden"
                       )}>
                          <div className="inline-flex items-center gap-2 mb-1 md:justify-end">
@@ -347,7 +347,7 @@ export default function Page() {
 
                       {/* Desktop Header for Alternating side */}
                       <div className={cn(
-                        "relative space-y-2 md:pl-12 col-start-2 md:row-start-1", 
+                        "hidden md:block relative space-y-2 md:pl-12 col-start-2 md:row-start-1", 
                         id % 2 !== 0 ? "md:block" : "md:hidden"
                       )}>
                          <div className="inline-flex items-center gap-2 mb-1">

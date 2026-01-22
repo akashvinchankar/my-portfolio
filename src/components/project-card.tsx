@@ -109,7 +109,7 @@ export function ProjectCard({
               alt={title}
               width={500}
               height={300}
-              className="h-80 w-full object-contain object-top transition-transform duration-300 group-hover:scale-105 bg-black/5"
+              className="h-48 sm:h-64 md:h-80 w-full object-contain object-top transition-transform duration-300 group-hover:scale-105 bg-black/5"
               loading="lazy"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               placeholder="blur"
