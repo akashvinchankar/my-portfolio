@@ -337,5 +337,51 @@ export const DATA = {
       image: "/Cocktail.png",
       video: "",
     },
+    {
+      title: "YouTube Clone",
+      href: "https://tube-akash-v.netlify.app/",
+      dates: "",
+      active: true,
+      description:
+        "YouTube clone with React.js, Redux Toolkit, and YouTube Data API featuring complete video streaming.",
+      technologies: ["React.js", "Redux Toolkit", "Axios", "YT API", "CSS"],
+      links: [
+        {
+          type: "Website",
+          href: "https://tube-akash-v.netlify.app/",
+          icon: <Icons.globe className="size-4" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/akashvinchankar/tube-akash",
+          icon: <Icons.github className="size-4" />,
+        },
+      ],
+      image: "/YTClone.png",
+      video: "",
+    },
+    {
+      title: "The Taravu",
+      href: "https://thetaravu.com/",
+      dates: "",
+      active: true,
+      description:
+        "Web application for heavy machinery pricing with React.js, real-time data scraping, and equipment listings.",
+      technologies: ["React.js", "JavaScript", "Axios", "Web Scraping", "CSS"],
+      links: [
+        {
+          type: "Website",
+          href: "https://thetaravu.com/",
+          icon: <Icons.globe className="size-4" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/akashvinchankar/bid-my-asset",
+          icon: <Icons.github className="size-4" />,
+        },
+      ],
+      image: "/thetaravu.png",
+      video: "",
+    },
   ],
 } as const;
